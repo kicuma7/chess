@@ -1,23 +1,20 @@
 #ifndef CHESS_H
 # define CHESS_H
 
-# include "../libs/minilibx-linux/mlx.h"
+# define WIDTH 900
+# define HEIGH 900
+
+# include <SDL2/SDL.h>
 # include <stdio.h>
 # include <stdlib.h>
 # include <stdbool.h>
-# include <unistd.h>
-# include <fcntl.h>
 
-# define WIDITH 500
-# define HEIGH  500
-# define ESC    65307
 
-typedef struct t_chess
+
+typedef struct  s_sdl
 {
-    void    *win;
-    void    *ptr;
-}       t_chess;
-
-void    free_exit(t_chess *mlx);
+    SDL_Window  *window;
+    SDL_Surface *screen;
+}   t_sdl;
 
 #endif
